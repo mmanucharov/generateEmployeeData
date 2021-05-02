@@ -1,5 +1,5 @@
 # generateEmployeeData
-This code is to generate employee data to import into mySQL for practice purposes. Max amount is 500, but can be changed in code.
+This code is to generate employee data into a csv file to import into mySQL for practice purposes. Max amount is 500, but can be changed in code.
 Data generated includes:
    - EmployeeID
    - First Name
