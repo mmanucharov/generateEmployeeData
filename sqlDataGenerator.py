@@ -1,5 +1,6 @@
 from random import randint, randrange
 import datetime
+import csv
 
 #name generater
 def generate_name():
@@ -47,7 +48,7 @@ thisYear = datetime.datetime.now().year
 cutOffYear = thisYear - 40 #max employment 40 years
 stat = ['Full Time', 'Contract']
 
-newFile = open('employeeData.txt', 'w')
+newFile = open('employeeData.csv', 'w')
 newFile.seek(0)
 #start generating data
 while i < rowCount:
@@ -79,6 +80,6 @@ while i < rowCount:
         pay = '$' + str(randrange(160000, 500000, 20000))
 
     i += 1
-    #print(str(employeeID) + ',' + name + ',' + division + ',' + str(year) + ',' + status + ',' + pay + '|')
-    newFile.write(str(employeeID) + ',' + name + ',' + division + ',' + str(year) + ',' + status + ',' + pay + '|\n')
+    #print(str(employeeID) + ',' + name + ',' + division + ',' + str(year) + ',' + status + ',' + pay)
+    newFile.write(str(employeeID) + ',' + name + ',' + division + ',' + str(year) + ',' + status + ',' + pay + '\n')
     newFile.truncate()
